@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ошибка 404 — Страница не найдена</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media.css">
-    <link rel="stylesheet" href="vid.MP4">
+    <!-- ❌ УДАЛЕНО: <link rel="stylesheet" href="vid.MP4"> — это было ошибкой -->
 </head>
 <body>
+
     <!-- ===== HEADER ===== -->
     <header class="header">
         <a href="/" class="header__logo">
+            <!-- ✅ Добавлен https:// -->
             <img
                 src="https://static.tildacdn.com/tild6436-3261-4264-a464-383136643335/VIsa__.png"
                 alt="Логотип компании"
@@ -19,7 +21,6 @@
             >
         </a>
 
-        <!-- Бургер-кнопка для мобильных -->
         <button class="burger" id="burgerBtn" aria-label="Открыть меню">
             <span class="burger__line"></span>
             <span class="burger__line"></span>
@@ -43,6 +44,8 @@
             </ul>
         </nav>
 
+        <div class="overlay" id="overlay"></div>
+
         <a href="tel:+78975347689" class="header__phone">
             +7 (897) 534-76-89
         </a>
@@ -52,7 +55,7 @@
     <main class="main">
         <section class="error-panel" id="errorPanel">
             <div class="error-panel__content">
-                <!-- Код ошибки -->
+
                 <div class="error-panel__code">
                     <span class="error-panel__digit">4</span>
                     <span class="error-panel__digit error-panel__digit--accent">0</span>
@@ -65,37 +68,44 @@
                     <br>Страница не найдена или была перемещена.
                 </p>
 
-                <!-- Кнопка возврата -->
                 <a href="/" class="error-panel__btn">
-                    <svg class="error-panel__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="error-panel__btn-icon" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2">
                         <path d="M19 12H5M12 19l-7-7 7-7"/>
                     </svg>
                     Вернуться на главную
                 </a>
 
-                <!-- Видео-секция -->
                 <div class="video-section">
                     <p class="video-section__label">А пока можно посмотреть это:</p>
                     <div class="video-section__container" id="videoContainer">
+
+                        <!-- ✅ Добавлен https:// -->
                         <img
                             src="https://img.icons8.com/emoji/96/deer-emoji.png"
-                            alt="Нажмите, чтобы воспроизвести видео"
+                            alt="Нажмите чтобы воспроизвести видео"
                             class="video-section__thumbnail"
                             id="videoThumbnail"
                             role="button"
                             tabindex="0"
                         >
+
+                        <!-- ✅ Видео: убедись что файл vid.mp4 лежит рядом с index.html -->
                         <video
                             class="video-section__player"
                             id="videoPlayer"
                             controls
                             preload="metadata"
+                            playsinline
                         >
+                            <source src="vid.mp4" type="video/mp4">
+                            <!-- ✅ Резервный вариант с оригинальным именем -->
                             <source src="vid.MP4" type="video/mp4">
                             Ваш браузер не поддерживает воспроизведение видео.
                         </video>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>
