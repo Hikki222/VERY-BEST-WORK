@@ -1,0 +1,82 @@
+@media (max-width: 480px) {
+    :root {
+        --header-height: 60px;
+    }
+
+    .header {
+        padding: 0 16px;
+    }
+
+    .header__logo-img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .main {
+        padding: 24px 12px;
+    }
+
+    .error-panel {
+        padding: 28px 18px;
+        border-radius: var(--radius-sm);
+    }
+
+    .error-panel__code {
+        gap: 6px;
+        margin-bottom: 14px;
+    }
+
+    .error-panel__digit {
+        font-size: 52px;
+    }
+
+    .error-panel__title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .error-panel__description {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .error-panel__btn {
+        padding: 11px 20px;
+        font-size: 13px;
+        border-radius: var(--radius-md);
+    }
+
+    .error-panel__btn-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .video-section {
+        margin-top: 24px;
+        padding-top: 20px;
+    }
+
+    .video-section__label {
+        font-size: 11px;
+        letter-spacing: 1px;
+    }
+
+    .video-section__thumbnail {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+    }
+
+    .footer {
+        padding: 16px;
+    }
+
+    .footer__text {
+        font-size: 11px;
+    }
+
+    .footer__link {
+        font-size: 11px;
+    }
+}

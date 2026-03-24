@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ошибка 404 — Страница не найдена</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <a href="/" class="header__logo">
+            <img
+                src="https://static.tildacdn.com/tild6436-3261-4264-a464-383136643335/VIsa__.png"
+                alt="Логотип компании"
+                class="header__logo-img"
+            >
+        </a>
+
+        <!-- Бургер-кнопка для мобильных -->
+        <button class="burger" id="burgerBtn" aria-label="Открыть меню">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+        </button>
+
+        <nav class="header__nav" id="navMenu">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a href="/" class="header__nav-link header__nav-link--active">Главная</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="/links" class="header__nav-link">Ссылки</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="/shop" class="header__nav-link">Магазин</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="/about" class="header__nav-link">О нас</a>
+                </li>
+            </ul>
+        </nav>
+
+        <a href="tel:+78975347689" class="header__phone">
+            +7 (897) 534-76-89
+        </a>
+    </header>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main">
+        <section class="error-panel" id="errorPanel">
+            <div class="error-panel__content">
+                <!-- Код ошибки -->
+                <div class="error-panel__code">
+                    <span class="error-panel__digit">4</span>
+                    <span class="error-panel__digit error-panel__digit--accent">0</span>
+                    <span class="error-panel__digit">4</span>
+                </div>
+
+                <h1 class="error-panel__title">Упс..</h1>
+                <p class="error-panel__description">
+                    Похоже, что при загрузке страницы произошла ошибка.
+                    <br>Страница не найдена или была перемещена.
+                </p>
+
+                <!-- Кнопка возврата -->
+                <a href="/" class="error-panel__btn">
+                    <svg class="error-panel__btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Вернуться на главную
+                </a>
+
+                <!-- Видео-секция -->
+                <div class="video-section">
+                    <p class="video-section__label">А пока можно посмотреть это:</p>
+                    <div class="video-section__container" id="videoContainer">
+                        <img
+                            src="https://img.icons8.com/emoji/96/deer-emoji.png"
+                            alt="Нажмите, чтобы воспроизвести видео"
+                            class="video-section__thumbnail"
+                            id="videoThumbnail"
+                            role="button"
+                            tabindex="0"
+                        >
+                        <video
+                            class="video-section__player"
+                            id="videoPlayer"
+                            controls
+                            preload="metadata"
+                        >
+                            <source src="../vid.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает воспроизведение видео.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 Компания. Все права защищены.</p>
+    </footer>
+
+    <script src="oper.js"></script>
+</body>
+</html>
